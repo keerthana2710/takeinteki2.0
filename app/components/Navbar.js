@@ -17,6 +17,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navLinks = [
@@ -28,60 +35,62 @@ export default function Navbar() {
   ];
 
   return (
-    <header
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled || pathname !== "/"
-        ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-zinc-100 py-3"
-        : "bg-transparent py-6"
-        }`}
-    >
-      <nav className="flex items-center justify-between px-6 lg:px-12 max-w-7xl mx-auto">
-        <Link href="/" className="flex items-center group">
-          <img
-            alt="Takeinteki"
-            className={`h-14 w-auto object-contain transition-all duration-300 ${isScrolled || pathname !== "/" ? "" : ""}`}
-            src="/navbar_logo.png"
-          />
-        </Link>
-
-        {/* Desktop Menu */}
-        <div className={`hidden lg:flex items-center gap-10 font-bold uppercase tracking-widest text-xs ${isScrolled || pathname !== "/" ? "text-on-surface-variant" : "text-white"}`}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="hover:text-primary transition-all relative group py-2"
-            >
-              {link.name}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ))}
-        </div>
-
-        <div className="flex items-center gap-6">
-          <Link
-            href="/login"
-            className={`hidden sm:inline-flex px-8 py-3 text-xs font-black uppercase tracking-widest rounded-xl transition-all active:scale-[0.98] ${isScrolled || pathname !== "/"
-              ? "bg-primary text-white hover:bg-secondary shadow-xl shadow-primary/20"
-              : "bg-white text-primary hover:bg-white/90 shadow-2xl"
-              }`}
-          >
-            Login
+    <>
+      <header
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled || pathname !== "/"
+          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-zinc-100 py-3"
+          : "bg-transparent py-6"
+          }`}
+      >
+        <nav className="flex items-center justify-between px-6 lg:px-12 max-w-7xl mx-auto">
+          <Link href="/" className="flex items-center group">
+            <img
+              alt="Takeinteki"
+              className={`h-14 w-auto object-contain transition-all duration-300 ${isScrolled || pathname !== "/" ? "" : ""}`}
+              src="/navbar_logo.png"
+            />
           </Link>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            onClick={toggleMenu}
-            className={`lg:hidden p-2 rounded-xl transition-all focus:outline-none ${isScrolled || pathname !== "/" ? "text-on-surface hover:bg-zinc-100" : "text-white hover:bg-white/10"}`}
-            aria-label="Toggle Menu"
-          >
-            <span className="material-symbols-outlined text-3xl">
-              {isMenuOpen ? "close" : "menu"}
-            </span>
-          </button>
-        </div>
-      </nav>
+          {/* Desktop Menu */}
+          <div className={`hidden lg:flex items-center gap-10 font-bold uppercase tracking-widest text-xs ${isScrolled || pathname !== "/" ? "text-on-surface-variant" : "text-white"}`}>
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="hover:text-primary transition-all relative group py-2"
+              >
+                {link.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            ))}
+          </div>
 
-      {/* Mobile Menu Overlay */}
+          <div className="flex items-center gap-6">
+            <Link
+              href="/login"
+              className={`hidden sm:inline-flex px-8 py-3 text-xs font-black uppercase tracking-widest rounded-xl transition-all active:scale-[0.98] ${isScrolled || pathname !== "/"
+                ? "bg-primary text-white hover:bg-secondary shadow-xl shadow-primary/20"
+                : "bg-white text-primary hover:bg-white/90 shadow-2xl"
+                }`}
+            >
+              Login
+            </Link>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={toggleMenu}
+              className={`lg:hidden p-2 rounded-xl transition-all focus:outline-none ${isScrolled || pathname !== "/" ? "text-on-surface hover:bg-zinc-100" : "text-white hover:bg-white/10"}`}
+              aria-label="Toggle Menu"
+            >
+              <span className="material-symbols-outlined text-3xl">
+                {isMenuOpen ? "close" : "menu"}
+              </span>
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile Menu Overlay — sibling of header so fixed positioning is relative to viewport */}
       <div
         className={`lg:hidden fixed inset-0 z-40 bg-zinc-950 transform transition-all duration-500 ease-[cubic-bezier(0.9,0,0.1,1)] ${isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
@@ -110,6 +119,6 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-    </header>
+    </>
   );
 }
