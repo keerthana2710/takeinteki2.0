@@ -19,7 +19,7 @@ export default function Footer() {
             <img
               alt="Takeinteki"
               className="h-12 brightness-0 invert group-hover:scale-105 transition-transform"
-              src="https://lh3.googleusercontent.com/aida/ADBb0uj3ytTOPvzXy9XoYw7PY0xvEw9qBjNrq99Rge3k4nO3EBJNZS7-spgOtj7EA8X67TDCqK2JSfKJ82m3JGgTDEO7THz85OfsJkV4k6u-nOOIP_e2Y4uONqv-GbhvEMjpiQSp4CI9t7UdiBiw6RiQjOekL1foRMrFeDeCLMLYN3p-_e-FzSrZQEoKcRArP6TUyWsiwbW0XxpUwQ4fUjPPy7Mbp43Quro8n80sdlXByTNP1NJlf3Jx99A6Sx00rhhiD-3Beut4EBjQwc0"
+              src="/navbar_logo.png"
             />
           </Link>
           <p className="text-zinc-500 text-lg leading-relaxed mb-12 max-w-sm opacity-80">
