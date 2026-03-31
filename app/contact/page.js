@@ -52,24 +52,6 @@ export default function ContactPage() {
                   ></textarea>
                 </div>
 
-                {/* Resume Upload Placeholder */}
-                <div className="space-y-3">
-                  <label className="text-xs font-extrabold text-zinc-500 uppercase tracking-widest ml-1">Upload Resume (Optional)</label>
-                  <div className="relative group">
-                    <input type="file" className="hidden" id="resume-upload" />
-                    <label
-                      htmlFor="resume-upload"
-                      className="flex flex-col items-center justify-center w-full min-h-[160px] border-2 border-dashed border-zinc-200 rounded-3xl bg-zinc-50 hover:bg-blue-50/50 hover:border-primary/30 transition-all cursor-pointer group"
-                    >
-                      <span className="material-symbols-outlined text-4xl text-zinc-300 group-hover:text-primary mb-3 transition-colors">
-                        cloud_upload
-                      </span>
-                      <p className="text-sm font-bold text-on-surface-variant group-hover:text-on-surface">Click to upload your resume</p>
-                      <p className="text-xs text-zinc-400 mt-1 uppercase tracking-widest">PDF, DOC, DOCX (Max 5MB)</p>
-                    </label>
-                  </div>
-                </div>
-
                 <button className="w-full lg:w-auto px-12 py-5 bg-primary text-white font-bold rounded-2xl shadow-xl hover:bg-secondary hover:-translate-y-1 active:scale-[0.98] transition-all flex items-center justify-center gap-3">
                   Send Message
                   <span className="material-symbols-outlined !text-white text-xl">send</span>

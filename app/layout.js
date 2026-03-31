@@ -1,4 +1,5 @@
 import "./globals.css";
+import { AuthProvider } from "@/lib/AuthContext";
 
 export const metadata = {
   title: "Takeinteki Info Solutions | Premier Recruitment Consultancy",
@@ -18,8 +19,13 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="bg-background text-on-surface font-body selection:bg-secondary/20 selection:text-primary">
-        {children}
+      <body
+        suppressHydrationWarning
+        className="bg-background text-on-surface font-body selection:bg-secondary/20 selection:text-primary"
+      >
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

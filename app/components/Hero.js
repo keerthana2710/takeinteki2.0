@@ -38,7 +38,7 @@ export default function Hero() {
             <img
               alt="Takeintaki Logo"
               className="w-full max-w-lg h-auto object-contain logo-halo drop-shadow-[0_35px_60px_rgba(0,0,0,0.4)] brightness-110"
-              src="https://lh3.googleusercontent.com/aida/ADBb0uicA6ArPL2Ym1tONVWs6bBwrrmtOoo55CJpzx_e8q79B1Vei9sCbnHMUBzB7CsSgUPhIxd8rqhsR2BurWrvkJlL3MYIHJcLlpacQssuMxb-Vl_WP2nfZmu4Rn_t4ixcMA0c-FRLaC0n17kspTxIRsr4bDZIDKLxJxzwQnJQmallcufhYNNUkA_OsVUehSoPTbFl6pGuqUcv-9wvyRVolq8dl-YP5bnV5TATJIhbBSXZfbTl6MEAdkbg2K8guV89PANnOHzr4BZFeAo"
+              src="/hero_banner.png"
             />
             <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-black/20 blur-3xl rounded-[100%]"></div>
           </div>

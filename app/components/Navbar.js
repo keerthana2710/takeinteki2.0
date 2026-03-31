@@ -29,18 +29,17 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled || pathname !== "/" 
-          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-zinc-100 py-3" 
-          : "bg-transparent py-6"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled || pathname !== "/"
+        ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-zinc-100 py-3"
+        : "bg-transparent py-6"
+        }`}
     >
       <nav className="flex items-center justify-between px-6 lg:px-12 max-w-7xl mx-auto">
         <Link href="/" className="flex items-center group">
           <img
             alt="Takeinteki"
-            className={`h-10 w-auto object-contain transition-all duration-300 ${isScrolled || pathname !== "/" ? "" : "brightness-0 invert group-hover:invert-0 group-hover:brightness-100"}`}
-            src="https://lh3.googleusercontent.com/aida/ADBb0uj3ytTOPvzXy9XoYw7PY0xvEw9qBjNrq99Rge3k4nO3EBJNZS7-spgOtj7EA8X67TDCqK2JSfKJ82m3JGgTDEO7THz85OfsJkV4k6u-nOOIP_e2Y4uONqv-GbhvEMjpiQSp4CI9t7UdiBiw6RiQjOekL1foRMrFeDeCLMLYN3p-_e-FzSrZQEoKcRArP6TUyWsiwbW0XxpUwQ4fUjPPy7Mbp43Quro8n80sdlXByTNP1NJlf3Jx99A6Sx00rhhiD-3Beut4EBjQwc0"
+            className={`h-14 w-auto object-contain transition-all duration-300 ${isScrolled || pathname !== "/" ? "" : ""}`}
+            src="/navbar_logo.png"
           />
         </Link>
 
@@ -61,11 +60,10 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <Link
             href="/login"
-            className={`hidden sm:inline-flex px-8 py-3 text-xs font-black uppercase tracking-widest rounded-xl transition-all active:scale-[0.98] ${
-              isScrolled || pathname !== "/" 
-                ? "bg-primary text-white hover:bg-secondary shadow-xl shadow-primary/20" 
-                : "bg-white text-primary hover:bg-white/90 shadow-2xl"
-            }`}
+            className={`hidden sm:inline-flex px-8 py-3 text-xs font-black uppercase tracking-widest rounded-xl transition-all active:scale-[0.98] ${isScrolled || pathname !== "/"
+              ? "bg-primary text-white hover:bg-secondary shadow-xl shadow-primary/20"
+              : "bg-white text-primary hover:bg-white/90 shadow-2xl"
+              }`}
           >
             Login
           </Link>
@@ -85,9 +83,8 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden fixed inset-0 z-40 bg-zinc-950 transform transition-all duration-500 ease-[cubic-bezier(0.9,0,0.1,1)] ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`lg:hidden fixed inset-0 z-40 bg-zinc-950 transform transition-all duration-500 ease-[cubic-bezier(0.9,0,0.1,1)] ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex flex-col h-full pt-32 px-10 gap-10">
           {navLinks.map((link, i) => (

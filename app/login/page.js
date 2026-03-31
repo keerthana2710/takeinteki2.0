@@ -1,20 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/lib/firebase";
+import { useAuth } from "@/lib/AuthContext";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
+  const { user } = useAuth();
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    if (user) {
+      router.replace("/dashboard");
+    }
+  }, [user, router]);
+
+  if (user) return null;
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email === "keerthi@takeinteki.com" && password === "keer1298") {
-      alert("Login successful!");
-      window.location.href = "/";
-    } else {
-      setError("Invalid email or password. Please try again.");
+    setError("");
+    setLoading(true);
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      router.push("/dashboard");
+    } catch (err) {
+      const messages = {
+        "auth/invalid-credential": "Invalid email or password. Please try again.",
+        "auth/user-not-found": "No account found with this email.",
+        "auth/wrong-password": "Incorrect password. Please try again.",
+        "auth/too-many-requests": "Too many attempts. Please try again later.",
+      };
+      setError(messages[err.code] || "Login failed. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -31,7 +58,7 @@ export default function LoginPage() {
               <img
                 alt="Takeintaki"
                 className="h-12 w-auto object-contain"
-                src="https://lh3.googleusercontent.com/aida/ADBb0uj3ytTOPvzXy9XoYw7PY0xvEw9qBjNrq99Rge3k4nO3EBJNZS7-spgOtj7EA8X67TDCqK2JSfKJ82m3JGgTDEO7THz85OfsJkV4k6u-nOOIP_e2Y4uONqv-GbhvEMjpiQSp4CI9t7UdiBiw6RiQjOekL1foRMrFeDeCLMLYN3p-_e-FzSrZQEoKcRArP6TUyWsiwbW0XxpUwQ4fUjPPy7Mbp43Quro8n80sdlXByTNP1NJlf3Jx99A6Sx00rhhiD-3Beut4EBjQwc0"
+                src="/navbar_logo.png"
               />
             </Link>
             <h1 className="text-3xl font-extrabold text-on-surface mb-2 font-headline">Welcome Back</h1>
@@ -52,6 +79,7 @@ export default function LoginPage() {
                   placeholder="name@takeinteki.com"
                   className="w-full pl-12 pr-4 py-4 bg-zinc-50 border border-zinc-100 rounded-2xl focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all font-medium text-on-surface placeholder:text-zinc-400"
                   required
+                  disabled={loading}
                 />
               </div>
             </div>
@@ -68,13 +96,24 @@ export default function LoginPage() {
                   lock
                 </span>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full pl-12 pr-4 py-4 bg-zinc-50 border border-zinc-100 rounded-2xl focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all font-medium text-on-surface"
+                  className="w-full pl-12 pr-12 py-4 bg-zinc-50 border border-zinc-100 rounded-2xl focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all font-medium text-on-surface"
                   required
+                  disabled={loading}
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword((v) => !v)}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-primary transition-colors focus:outline-none"
+                  tabIndex={-1}
+                >
+                  <span className="material-symbols-outlined text-xl">
+                    {showPassword ? "visibility_off" : "visibility"}
+                  </span>
+                </button>
               </div>
             </div>
 
@@ -87,14 +126,22 @@ export default function LoginPage() {
 
             <button
               type="submit"
-              className="w-full bg-primary text-white font-bold py-5 rounded-2xl shadow-xl hover:bg-secondary hover:-translate-y-1 active:scale-[0.98] transition-all flex items-center justify-center gap-3"
+              disabled={loading}
+              className="w-full bg-primary text-white font-bold py-5 rounded-2xl shadow-xl hover:bg-secondary hover:-translate-y-1 active:scale-[0.98] transition-all flex items-center justify-center gap-3 disabled:opacity-60 disabled:hover:translate-y-0"
             >
-              Log In
-              <span className="material-symbols-outlined !text-white text-lg">arrow_forward</span>
+              {loading ? (
+                <>
+                  <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+                  Signing In...
+                </>
+              ) : (
+                <>
+                  Log In
+                  <span className="material-symbols-outlined !text-white text-lg">arrow_forward</span>
+                </>
+              )}
             </button>
           </form>
-
-
         </div>
       </div>
     </div>
