@@ -5,7 +5,7 @@ import ServicesList from "../components/ServicesList";
 
 export const metadata = {
   title: "About Us | Takeinteki Info Solutions",
-  description: "Learn about Takeinteki's mission to bridge the gap between organizational vision and technology through secure and transformative solutions.",
+  description: "Learn about Takeinteki Info Solutions — a trusted recruitment, staffing, and BPO partner, and part of the broader TEKIgroup vision across recruitment, construction, and technology.",
 };
 
 export default function AboutPage() {
@@ -14,8 +14,8 @@ export default function AboutPage() {
       <Navbar />
       <main className="pt-20">
         <AboutUs />
-        {/* Render only Hiring Partners here */}
-        <ServicesList includeOnly={["Hiring Partners"]} />
+        {/* Render only Recruitment Solutions here */}
+        <ServicesList includeOnly={["Recruitment Solutions"]} />
       </main>
       <Footer />
     </div>

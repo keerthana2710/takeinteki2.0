@@ -45,8 +45,8 @@ export default function Navbar() {
         <nav className="flex items-center justify-between px-6 lg:px-12 max-w-7xl mx-auto">
           <Link href="/" className="flex items-center group">
             <img
-              alt="Takeinteki"
-              className={`h-14 w-auto object-contain transition-all duration-300 ${isScrolled || pathname !== "/" ? "" : ""}`}
+              alt="TEKI group"
+              className={`h-9 lg:h-11 w-auto object-contain transition-all duration-300 ${isScrolled || pathname !== "/" ? "" : "brightness-0 invert"}`}
               src="/navbar_logo.png"
             />
           </Link>

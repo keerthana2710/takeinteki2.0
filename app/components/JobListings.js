@@ -40,7 +40,7 @@ export default function JobListings() {
             <span className="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">Careers</span>
             <h2 className="font-headline text-4xl lg:text-7xl font-extrabold text-on-surface mb-6">Active Roles</h2>
             <p className="text-on-surface-variant text-xl leading-relaxed opacity-80">
-              Join the team that is shaping the future of digital security and software innovation.
+              Join a team that is shaping the future of recruitment, staffing, and business solutions.
             </p>
           </div>
           <Link

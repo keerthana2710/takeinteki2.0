@@ -2,44 +2,39 @@
 
 const servicesData = [
   {
-    category: "Cybersecurity",
-    icon: "shield_lock",
+    category: "Recruitment Solutions",
+    icon: "groups",
     color: "from-blue-600 to-indigo-700",
     items: [
-      { name: "Website / Web Application Security (VA/PT)", icon: "language" },
-      { name: "Android / iOS Application Security (VA/PT)", icon: "app_shortcut" },
-      { name: "API Application Security (VA/PT)", icon: "api" },
-      { name: "Source Code Security Review", icon: "code" },
-      { name: "Cloud Security Audit & (VA/PT)", icon: "cloud_done" },
-      { name: "Network (Infrastructure) VA/PT", icon: "hub" },
-      { name: "IOT Security (VA/PT)", icon: "memory" },
-      { name: "Cyber Forensics", icon: "policy" }
+      { name: "Contract Staffing", desc: "Flexible workforce solutions tailored to your business needs.", icon: "badge" },
+      { name: "Bulk & Volume Hiring", desc: "Efficient recruitment for large-scale workforce requirements.", icon: "diversity_3" },
+      { name: "Campus Recruitment", desc: "Connecting fresh talent with exciting career opportunities.", icon: "school" },
+      { name: "IT & Non-IT Recruitment", desc: "Specialized hiring solutions across multiple industries and functions.", icon: "person_search" },
+      { name: "Recruitment Process Outsourcing (RPO)", desc: "End-to-end recruitment management for improved hiring efficiency.", icon: "manage_accounts" },
+      { name: "Employee Screening & Verification", desc: "Ensuring quality hires through structured assessment and verification processes.", icon: "verified_user" },
+      { name: "Workforce Planning & HR Support", desc: "Supporting organizations with workforce strategy, planning, and HR operations.", icon: "insights" }
     ]
   },
   {
-    category: "Development",
-    icon: "code_blocks",
+    category: "BPO Services",
+    icon: "headset_mic",
     color: "from-blue-500 to-blue-600",
     items: [
-      { name: "Website Development", icon: "web" },
-      { name: "Web Application Development", icon: "devices" },
-      { name: "Android Application Development", icon: "android" },
-      { name: "iOS Application Development", icon: "phone_iphone" },
-      { name: "API Development", icon: "terminal" },
-      { name: "CMS Development (WordPress, Shopify, etc.)", icon: "dashboard_customize" },
-      { name: "Web3 Integration (Crypto)", icon: "currency_bitcoin" },
-      { name: "Augmented Reality Integration", icon: "view_in_ar" }
+      { name: "Domestic Voice Process", icon: "support_agent" },
+      { name: "Customer Support", icon: "contact_support" },
+      { name: "Back Office Operations", icon: "business_center" },
+      { name: "Data Processing", icon: "database" },
+      { name: "Lead Generation", icon: "trending_up" },
+      { name: "Telecalling Services", icon: "call" }
     ]
   },
   {
-    category: "Hiring Partners",
-    icon: "group_add",
+    category: "Innovation & Products",
+    icon: "rocket_launch",
     color: "from-blue-400 to-blue-500",
     items: [
-      { name: "IT Recruitment Services", icon: "person_search" },
-      { name: "Contract Staffing", icon: "assignment_ind" },
-      { name: "Permanent Hiring", icon: "verified" },
-      { name: "Client Acquisition & Delivery Support", icon: "handshake" }
+      { name: "Yutko", badge: "Under Development", desc: "Smart CRM Platform for Business Growth.", icon: "hub" },
+      { name: "JobXT", badge: "Under Development", desc: "Next-Generation Job & Career Platform.", icon: "work" }
     ]
   }
 ];
@@ -57,9 +52,9 @@ export default function ServicesList({ exclude = [], includeOnly = null }) {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 reveal">
         <div className="flex flex-col mb-24 items-center text-center">
           <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Our Expertise</span>
-          <h2 className="font-headline text-4xl lg:text-7xl font-extrabold text-on-surface mb-8">Comprehensive Solutions</h2>
+          <h2 className="font-headline text-4xl lg:text-5xl xl:text-6xl font-extrabold text-on-surface mb-8">Empowering Businesses Through Talent &amp; Innovation</h2>
           <p className="text-on-surface-variant text-xl max-w-3xl leading-relaxed font-medium">
-            From ironclad security to cutting-edge development and world-class hiring, we provide the strategic power your business needs to excel.
+            From strategic recruitment and workforce solutions to BPO services and emerging technology products, we help organizations build stronger teams, streamline operations, and achieve sustainable growth.
           </p>
         </div>
 
@@ -85,6 +80,16 @@ export default function ServicesList({ exclude = [], includeOnly = null }) {
                     <span className="text-base font-extrabold text-on-surface leading-snug tracking-tight">
                       {item.name}
                     </span>
+                    {item.badge && (
+                      <span className="mt-3 inline-block px-3 py-1 rounded-full bg-blue-50 text-primary text-[10px] font-black uppercase tracking-widest border border-primary/10">
+                        {item.badge}
+                      </span>
+                    )}
+                    {item.desc && (
+                      <p className="mt-3 text-sm text-on-surface-variant leading-relaxed opacity-80 font-medium">
+                        {item.desc}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>

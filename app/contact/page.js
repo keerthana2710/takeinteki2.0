@@ -90,7 +90,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="text-xs font-extrabold text-zinc-400 uppercase tracking-widest mb-2">Call Us</h4>
-                      <p className="text-lg font-bold text-on-surface leading-snug">+91 9080223412</p>
+                      <p className="text-lg font-bold text-on-surface leading-snug">+91 9597392500</p>
                     </div>
                   </div>
                 </div>

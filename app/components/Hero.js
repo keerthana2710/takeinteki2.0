@@ -23,13 +23,10 @@ export default function Hero() {
             Connecting world-class organizations with elite professionals through high-precision recruitment solutions.
           </p>
           <div className="flex flex-wrap gap-6 mt-2 items-center">
-            <button className="bg-white text-[#1E3A8A] px-8 py-4 lg:px-10 lg:py-5 rounded-2xl font-bold text-lg shadow-xl hover:bg-blue-50 hover:-translate-y-1 active:scale-[0.98] transition-all flex items-center gap-3">
-              Get Started
-              <span className="material-symbols-outlined text-xl !text-primary">arrow_forward</span>
-            </button>
-            <button className="bg-transparent text-white border-2 border-white/30 backdrop-blur-sm px-8 py-4 lg:px-10 lg:py-5 rounded-2xl font-bold text-lg hover:bg-white/10 hover:-translate-y-1 transition-all active:scale-[0.98]">
+            <a href="#services" className="bg-white text-[#1E3A8A] px-8 py-4 lg:px-10 lg:py-5 rounded-2xl font-bold text-lg shadow-xl hover:bg-blue-50 hover:-translate-y-1 active:scale-[0.98] transition-all flex items-center gap-3">
               Explore Services
-            </button>
+              <span className="material-symbols-outlined text-xl !text-primary">arrow_forward</span>
+            </a>
           </div>
         </div>
         <div className="relative flex items-center justify-center lg:justify-end mt-12 lg:mt-0">

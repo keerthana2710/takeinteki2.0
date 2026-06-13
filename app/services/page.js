@@ -4,7 +4,7 @@ import ServicesList from "../components/ServicesList";
 
 export const metadata = {
   title: "Our Services | Takeinteki Info Solutions",
-  description: "Explore Takeinteki's full suite of cybersecurity and software development services designed to drive business growth and protect digital assets.",
+  description: "Explore Takeinteki's full suite of recruitment, staffing, BPO services, and technology products designed to help businesses build stronger teams and achieve sustainable growth.",
 };
 
 export default function ServicesPage() {

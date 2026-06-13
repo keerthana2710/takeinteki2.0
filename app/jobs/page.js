@@ -76,7 +76,7 @@ export default function JobsPage() {
               Open Positions
             </h1>
             <p className="text-on-surface-variant text-xl leading-relaxed max-w-3xl opacity-80">
-              Join the team that is shaping the future of digital security and software innovation.
+              Join a team that is shaping the future of recruitment, staffing, and business solutions.
             </p>
           </div>
 

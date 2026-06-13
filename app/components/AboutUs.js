@@ -7,62 +7,73 @@ export default function AboutUs() {
       <div className="absolute top-1/4 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-[100px] -z-10 animate-pulse"></div>
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12 reveal">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-          {/* Text Content */}
-          <div className="lg:col-span-7">
+        {/* Our Story */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-start">
+          <div className="lg:col-span-5">
             <span className="text-primary font-bold tracking-widest uppercase text-sm mb-6 block border-l-4 border-primary pl-4">Our Story</span>
-            <h2 className="font-headline text-4xl lg:text-6xl font-extrabold text-on-surface mb-8 leading-tight">
+            <h2 className="font-headline text-4xl lg:text-6xl font-extrabold text-on-surface leading-tight">
               Get to <span className="text-primary">K N O W</span> US
             </h2>
+          </div>
+          <div className="lg:col-span-7">
             <div className="space-y-6 text-on-surface-variant text-lg lg:text-xl leading-relaxed opacity-90">
               <p>
-                Takeinteki was founded in 2024 with a passion for technology and a commitment to digital security. 
-                Our team combines creative vision with technical expertise to develop custom software tailored to your unique requirements.
+                Takeinteki Info Solutions Pvt Ltd was founded in 2024 as a recruitment consultancy and hiring partner with the goal of connecting talented professionals with leading organizations. Over time, the company expanded its services to include staffing solutions, talent acquisition, and BPO services, helping businesses improve workforce efficiency and operational performance.
               </p>
               <p>
-                By adhering to industry best practices and leveraging the latest technologies, we deliver exceptional, future-ready solutions. 
-                Our experts are well-versed in established security frameworks like <span className="text-primary font-bold">OWASP Top 10</span>, 
-                <span className="text-primary font-bold"> SANS Top 25</span>, <span className="text-primary font-bold"> MITRE ATT&CK®</span> and more, 
-                ensuring that your software is protected against all threats.
+                As part of the larger <span className="text-primary font-bold">TEKIgroup</span> vision, the organization has diversified into multiple business sectors. This includes <span className="text-primary font-bold">Tekis Interior &amp; Construction</span>, a company focused on construction, interior design, and infrastructure solutions.
               </p>
               <p>
-                Today, Takeinteki stands as a trusted partner, offering a comprehensive suite of cybersecurity and software development solutions. 
-                We&apos;re dedicated to safeguarding your digital assets and delivering innovative solutions that drive business growth.
+                TEKIgroup is also investing in technology-driven innovation through products currently under development:
               </p>
-            </div>
-          </div>
-
-          {/* Cards / Visuals */}
-          <div className="lg:col-span-5 flex flex-col gap-8">
-            <div className="bg-gradient-to-br from-[#1E3A8A] via-[#1e40af] to-[#3B82F6] p-10 rounded-[2.5rem] shadow-2xl relative group overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.1),_transparent)]"></div>
-              <span className="material-symbols-outlined text-5xl text-blue-300/40 mb-6 block group-hover:scale-110 transition-transform">visibility</span>
-              <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
-              <p className="text-blue-100 text-lg leading-relaxed opacity-80">
-                To empower organizations to navigate the digital landscape confidently through innovative technologies and effortless cybersecurity solutions.
-              </p>
-            </div>
-
-            <div className="bg-surface-variant p-10 rounded-[2.5rem] border border-zinc-100 shadow-sm relative group overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-xl group-hover:bg-primary/10 transition-all"></div>
-              <span className="material-symbols-outlined text-5xl text-primary/20 mb-6 block group-hover:scale-110 transition-transform">handshake</span>
-              <h3 className="text-2xl font-bold text-on-surface mb-4">Our Mission</h3>
-              <p className="text-on-surface-variant text-lg leading-relaxed opacity-80">
-                We simplify the complexities of software development by bridging the gap between organizational vision and technology, delivering seamless, secure, and transformative solutions that align with business goals.
+              <ul className="space-y-3">
+                <li className="flex gap-3">
+                  <span className="text-primary font-bold leading-relaxed">•</span>
+                  <span><span className="font-bold text-on-surface">Yutko</span> – A Customer Relationship Management (CRM) platform designed to streamline business operations and customer engagement.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-primary font-bold leading-relaxed">•</span>
+                  <span><span className="font-bold text-on-surface">JobXT</span> – A next-generation job and career platform inspired by leading recruitment and professional networking platforms, connecting employers with job seekers.</span>
+                </li>
+              </ul>
+              <p>
+                Today, Takeinteki Info Solutions Pvt Ltd continues to grow as a trusted recruitment, staffing, and BPO partner while contributing to the broader vision of TEKIgroup across recruitment, construction, and technology sectors.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Client Trust Strip */}
-        <div className="mt-24 pt-12 border-t border-zinc-100 flex flex-wrap justify-between items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
-           <p className="w-full text-center lg:text-left lg:w-auto font-bold uppercase tracking-widest text-xs text-zinc-500">Security Excellence Frameworks</p>
-           <div className="flex flex-wrap justify-center lg:justify-end gap-10 font-extrabold text-xl lg:text-2xl text-on-surface-variant">
-              <span>OWASP</span>
-              <span>SANS</span>
-              <span>MITRE ATT&CK</span>
-              <span>ISO 27001</span>
-           </div>
+        {/* Our Vision & Our Mission */}
+        <div className="mt-20 lg:mt-28">
+          <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
+            <span className="text-primary font-bold tracking-widest uppercase text-sm mb-3 block">Our Purpose</span>
+            <h3 className="font-headline text-3xl lg:text-5xl font-extrabold text-on-surface">Vision &amp; Mission</h3>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            {/* Vision */}
+            <div className="bg-gradient-to-br from-[#1E3A8A] via-[#1e40af] to-[#3B82F6] p-10 lg:p-12 rounded-[2.5rem] shadow-2xl relative group overflow-hidden">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.12),_transparent)]"></div>
+              <span className="material-symbols-outlined text-5xl text-blue-300/50 mb-6 block group-hover:scale-110 transition-transform">visibility</span>
+              <h4 className="text-2xl lg:text-3xl font-bold text-white mb-5">Our Vision</h4>
+              <p className="text-blue-100 text-lg lg:text-xl leading-relaxed opacity-90">
+                To build TEKIgroup into a trusted and diversified business ecosystem that empowers organizations and individuals through recruitment, BPO services, construction solutions, and innovative technology products.
+              </p>
+            </div>
+
+            {/* Mission */}
+            <div className="bg-surface-variant p-10 lg:p-12 rounded-[2.5rem] border border-zinc-100 shadow-sm relative group overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-primary/10 transition-all"></div>
+              <span className="material-symbols-outlined text-5xl text-primary/30 mb-6 block group-hover:scale-110 transition-transform">handshake</span>
+              <h4 className="text-2xl lg:text-3xl font-bold text-on-surface mb-5">Our Mission</h4>
+              <ul className="text-on-surface-variant text-base lg:text-lg leading-relaxed opacity-90 space-y-4">
+                <li className="flex gap-3"><span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span><span>Deliver reliable recruitment, staffing, and BPO solutions to businesses.</span></li>
+                <li className="flex gap-3"><span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span><span>Connect talented professionals with meaningful career opportunities.</span></li>
+                <li className="flex gap-3"><span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span><span>Provide quality construction and interior solutions through Tekis Interior &amp; Construction.</span></li>
+                <li className="flex gap-3"><span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span><span>Develop innovative technology products that simplify business operations and talent acquisition.</span></li>
+                <li className="flex gap-3"><span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span><span>Create long-term value for clients, employees, partners, and communities through excellence, integrity, and continuous innovation.</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
