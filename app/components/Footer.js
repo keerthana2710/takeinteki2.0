@@ -29,7 +29,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-zinc-950 w-full pt-32 pb-16 border-t border-white/5 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 px-6 lg:px-12 max-w-7xl mx-auto relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-12 gap-y-16 px-6 lg:px-12 max-w-7xl mx-auto relative z-10">
         <div className="col-span-1">
           <Link href="/" className="inline-block mb-12 group transition-all">
             <img
@@ -87,21 +87,21 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <a
                 href="tel:+919597392500"
-                className="flex items-center gap-4 text-white group/phone transition-colors hover:text-primary"
+                className="flex items-center gap-3 text-white group/phone transition-colors hover:text-primary"
               >
                 <span className="w-10 h-10 shrink-0 rounded-xl bg-primary/15 flex items-center justify-center text-primary transition-all duration-300 group-hover/phone:bg-primary group-hover/phone:text-white">
                   <span className="material-symbols-outlined text-xl">call</span>
                 </span>
-                <span className="text-lg font-bold tracking-wide whitespace-nowrap">+91 95973 92500</span>
+                <span className="text-base font-bold whitespace-nowrap">+91 95973 92500</span>
               </a>
               <a
                 href="tel:+919080223412"
-                className="flex items-center gap-4 text-white group/phone transition-colors hover:text-primary"
+                className="flex items-center gap-3 text-white group/phone transition-colors hover:text-primary"
               >
                 <span className="w-10 h-10 shrink-0 rounded-xl bg-primary/15 flex items-center justify-center text-primary transition-all duration-300 group-hover/phone:bg-primary group-hover/phone:text-white">
                   <span className="material-symbols-outlined text-xl">call</span>
                 </span>
-                <span className="text-lg font-bold tracking-wide whitespace-nowrap">+91 90802 23412</span>
+                <span className="text-base font-bold whitespace-nowrap">+91 90802 23412</span>
               </a>
             </div>
           </div>
