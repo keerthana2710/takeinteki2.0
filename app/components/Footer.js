@@ -82,12 +82,27 @@ export default function Footer() {
               11, 48th St, Sarvamangala Colony, Manthope Colony, Ashok Nagar, Chennai, Tamil Nadu 600083
             </p>
           </div>
-          <div className="flex items-center gap-6 text-white group cursor-pointer p-6 bg-white/5 rounded-[2rem] hover:bg-primary transition-all duration-500 border border-white/5">
-            <span className="material-symbols-outlined text-primary group-hover:text-white text-4xl transform transition-transform group-hover:scale-110">call</span>
-            <div className="flex flex-col">
-              <span className="text-[10px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-blue-100 mb-1">Direct Line</span>
-              <a href="tel:+919597392500" className="text-xl font-black">+91 9597392500</a>
-              <a href="tel:+919080223412" className="text-xl font-black">+91 90802 23412</a>
+          <div className="p-6 bg-white/5 rounded-[2rem] border border-white/5">
+            <span className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-4 block">Direct Line</span>
+            <div className="flex flex-col gap-3">
+              <a
+                href="tel:+919597392500"
+                className="flex items-center gap-4 text-white group/phone transition-colors hover:text-primary"
+              >
+                <span className="w-10 h-10 shrink-0 rounded-xl bg-primary/15 flex items-center justify-center text-primary transition-all duration-300 group-hover/phone:bg-primary group-hover/phone:text-white">
+                  <span className="material-symbols-outlined text-xl">call</span>
+                </span>
+                <span className="text-lg font-bold tracking-wide whitespace-nowrap">+91 95973 92500</span>
+              </a>
+              <a
+                href="tel:+919080223412"
+                className="flex items-center gap-4 text-white group/phone transition-colors hover:text-primary"
+              >
+                <span className="w-10 h-10 shrink-0 rounded-xl bg-primary/15 flex items-center justify-center text-primary transition-all duration-300 group-hover/phone:bg-primary group-hover/phone:text-white">
+                  <span className="material-symbols-outlined text-xl">call</span>
+                </span>
+                <span className="text-lg font-bold tracking-wide whitespace-nowrap">+91 90802 23412</span>
+              </a>
             </div>
           </div>
         </div>
