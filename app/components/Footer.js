@@ -79,7 +79,7 @@ export default function Footer() {
           <div className="mb-12">
             <p className="text-lg font-bold text-white mb-2">Corporate HQ</p>
             <p className="text-sm text-zinc-500 leading-relaxed font-medium opacity-80">
-              Level 12, Tech Horizon Tower, Whitefield Main Rd, Bangalore - 560066, India
+              11, 48th St, Sarvamangala Colony, Manthope Colony, Ashok Nagar, Chennai, Tamil Nadu 600083
             </p>
           </div>
           <div className="flex items-center gap-6 text-white group cursor-pointer p-6 bg-white/5 rounded-[2rem] hover:bg-primary transition-all duration-500 border border-white/5">
@@ -87,6 +87,7 @@ export default function Footer() {
             <div className="flex flex-col">
               <span className="text-[10px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-blue-100 mb-1">Direct Line</span>
               <a href="tel:+919597392500" className="text-xl font-black">+91 9597392500</a>
+              <a href="tel:+919080223412" className="text-xl font-black">+91 90802 23412</a>
             </div>
           </div>
         </div>
